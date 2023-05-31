@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" prefHeight="650" prefWidth="1200" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emsi.tache_manage.Controller.MainController">
+   <left>
+      <VBox prefHeight="625.0" prefWidth="200.0" style="-fx-background-color: #ae8159;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="87.0" prefWidth="205.0" style="-fx-background-color: #ae8159; -fx-text-fill: white;" text="TacheApp">
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="23.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="listbtn" mnemonicParsing="false" onAction="#handleDetails" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #ae8159; -fx-text-fill: white;" text="List">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="addbtn" mnemonicParsing="false" onAction="#handleAjouter" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: #ae8159; -fx-text-fill: white;" text="Ajouter">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="txtbtn" mnemonicParsing="false" onAction="#handleTxt" prefHeight="48.0" prefWidth="218.0" style="-fx-background-color: #ae8159;" text="Data Txt" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="jsonbtn" mnemonicParsing="false" onAction="#handleJson" prefHeight="50.0" prefWidth="197.0" style="-fx-background-color: #ae8159; -fx-text-fill: white;" text="Data Json">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="excelbtn" mnemonicParsing="false" onAction="#handleExcel" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #ae8159; -fx-text-fill: white;" text="Data Excel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutbtn" mnemonicParsing="false" onAction="#handlelogout" prefHeight="58.0" prefWidth="199.0" style="-fx-background-color: #ae8159; -fx-text-fill: white;" text="Logout">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="210.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+    <center>
+        <!-- Contenu de votre interface principale -->
+    </center>
+
+      <VBox fx:id="vboxaff" prefHeight="700.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+
+      </VBox>
+   <center>
+      <Label text="Bienvenue dans TacheApp" textFill="#ae8159" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </center>
+
+</BorderPane>

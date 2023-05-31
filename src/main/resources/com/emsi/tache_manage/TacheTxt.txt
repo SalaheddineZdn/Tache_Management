@@ -1,0 +1,7 @@
+1;Tache A;Description de la tache A;debut;basse
+2;Tache B;Description de la tache B;encours;haute
+3;Tache C;Description de la tache C;termine;moyenne
+4;Tache D;Description de la tache D;encours;basse
+5;Tache E;Description de la tache E;encours;basse
+6;Tache F;Description de la tache F;debut;basse
+7;Tache G;Description de la tache G;debut;haute

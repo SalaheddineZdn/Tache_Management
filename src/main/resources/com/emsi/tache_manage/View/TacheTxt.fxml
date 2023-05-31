@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emsi.tache_manage.Controller.ControllerTxt">
+
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <Button layoutX="684.0" layoutY="105.0" onAction="#ImporterTxt" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #ae8159; -fx-text-fill: white;" text="Importer" />
+   <Label layoutX="393.0" layoutY="25.0" text="Import Txt Data Tache" textFill="#b46f62">
+      <font>
+         <Font size="22.0" />
+      </font>
+   </Label>
+   <TextArea fx:id="AreaResult" editable="false" layoutX="220.0" layoutY="166.0" prefHeight="450.0" prefWidth="562.0" />
+   <Button layoutX="219.0" layoutY="105.0" onAction="#ExporterTxt" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #ae8159; -fx-text-fill: white;" text="Exporter" />
+   <Label alignment="CENTER" layoutX="237.0" layoutY="130.0" prefHeight="17.0" prefWidth="61.0" fx:id="labelexp" />
+   <Label alignment="CENTER" layoutX="705.0" layoutY="130.0" prefHeight="17.0" prefWidth="61.0" fx:id="labelimp" />
+
+</Pane>

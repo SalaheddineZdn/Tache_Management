@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="650.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emsi.tache_manage.Controller.DetailsController">
+
+    <Button fx:id="btnedit" layoutX="649.0" layoutY="431.0" mnemonicParsing="false" onAction="#modifyTache" prefHeight="25.0" prefWidth="294.0" style="-fx-background-color: #ae8159; -fx-text-fill: white;" text="MODIFIER" />
+    <Button fx:id="btndelete" layoutX="552.0" layoutY="39.0" mnemonicParsing="false" style="-fx-background-color: #ae8159; -fx-text-fill: white;" text="SUPPRIMER" textAlignment="CENTER" />
+
+    <TableView fx:id="tableTaches" layoutX="14.0" layoutY="71.0" prefHeight="556.0" prefWidth="616.0">
+        <columns>
+            <TableColumn fx:id="columnId" prefWidth="40.0" text="ID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="columnDescription" prefWidth="229.6000518798828" text="Description">
+                <cellValueFactory>
+                    <PropertyValueFactory property="description" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="columnNom" prefWidth="126.39999008178711" text="Nom">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nom" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="columnStatut" prefWidth="114.39996337890625" text="Statut">
+                <cellValueFactory>
+                    <PropertyValueFactory property="statut" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="columnPriorite" prefWidth="103.20001220703125" text="Priorite">
+                <cellValueFactory>
+                    <PropertyValueFactory property="priority" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+   <TextField fx:id="nomTextField" layoutX="708.0" layoutY="198.0" prefHeight="25.0" prefWidth="235.0" />
+   <TextArea fx:id="descriptionTextArea" layoutX="708.0" layoutY="248.0" prefHeight="83.0" prefWidth="235.0" />
+   <Label layoutX="665.0" layoutY="161.0" text="Id:" />
+   <Label layoutX="657.0" layoutY="202.0" text="Nom:" />
+   <Label layoutX="640.0" layoutY="248.0" text="Description:" />
+   <Label layoutX="654.0" layoutY="349.0" text="Statut:" />
+   <Label layoutX="651.0" layoutY="383.0" text="Priorite:" />
+
+    <RadioButton fx:id="debut" layoutX="731.0" layoutY="349.0" text="debut">
+        <toggleGroup>
+            <ToggleGroup fx:id="statutToggleGroup" />
+        </toggleGroup></RadioButton>
+    <RadioButton fx:id="encours" layoutX="792.0" layoutY="349.0" text="encours" toggleGroup="$statutToggleGroup" />
+    <RadioButton fx:id="termine" layoutX="864.0" layoutY="349.0" text="termine" toggleGroup="$statutToggleGroup" />
+
+    <RadioButton fx:id="basse" layoutX="733.0" layoutY="392.0" text="basse">
+        <toggleGroup>
+            <ToggleGroup fx:id="prioriteToggleGroup" />
+        </toggleGroup></RadioButton>
+    <RadioButton fx:id="moyenne" layoutX="790.0" layoutY="392.0" text="moyenne" toggleGroup="$prioriteToggleGroup" />
+    <RadioButton fx:id="haute" layoutX="870.0" layoutY="392.0" text="haute" toggleGroup="$prioriteToggleGroup" />
+   <TextField fx:id="idTextField" editable="false" layoutX="708.0" layoutY="157.0" prefHeight="25.0" prefWidth="235.0" />
+   <Label layoutX="216.0" layoutY="14.0" text="Liste des taches" textFill="#ae8159">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Label>
+   <Label layoutX="699.0" layoutY="95.0" text="Modifier une tache" textFill="#ae8159">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Label>
+
+</Pane>
